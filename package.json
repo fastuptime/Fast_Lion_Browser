@@ -1,0 +1,47 @@
+{
+  "name": "fast-lion-scanner",
+  "productName": "Fast Lion Scanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Can Adam & FastUptime",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^20.0.3",
+    "electron-builder": "^5.35.0",
+    "electron-packager": "^13.1.1"
+  },
+  "build": {
+    "appId": "FastLionScanner",
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "256x256.ico"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "256x256.ico",
+      "uninstallerIcon": "256x256.ico",
+      "uninstallDisplayName": "Fast Lion Scanner Uninstaller",
+      "license": "license.md",
+      "allowToChangeInstallationDirectory": false
+    }
+  },
+  "dependencies": {
+    "is-online": "^8.5.1",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
